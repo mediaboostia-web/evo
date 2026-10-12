@@ -1,0 +1,17 @@
+FILM DE PRÉSENTATION (section juste après le héros)
+
+Format attendu : 16:9, 1920 x 1080, MP4 (H.264 + AAC), idéalement moins de 15 Mo pour 60 secondes.
+
+Option A : fichier hébergé sur le site
+  1. Déposer ici le fichier, par exemple : evo-presentation.mp4
+  2. Déposer les sous-titres français : evo-presentation.fr.vtt
+  3. Dans src/lib/site.ts, renseigner :
+       mp4: "/video/evo-presentation.mp4"
+       captions: "/video/evo-presentation.fr.vtt"
+
+Option B : vidéo YouTube
+  Dans src/lib/site.ts, renseigner : youtubeId: "IDENTIFIANT_DE_LA_VIDEO"
+  Le lecteur est chargé en mode de confidentialité avancée, uniquement au clic.
+
+L'affiche (image affichée avant la lecture) se change avec le champ "poster".
+Tant qu'aucune vidéo n'est renseignée, le cadre affiche « Film de présentation, bientôt disponible ».

@@ -1,0 +1,28 @@
+# Evo, Mon Répétiteur Virtuel
+
+> Evo est un répétiteur virtuel propulsé par l'intelligence artificielle, conçu au Gabon par la startup EdTech Mon Répétiteur Virtuel. Il explique les leçons, fait pratiquer avec des exercices adaptés au niveau de l'élève, corrige les devoirs et informe les parents des progrès, du primaire au lycée. Evo est le premier répétiteur IA inclusif du Gabon : sous-titres automatiques, avatar en langue des signes, lecture à voix haute et braille numérique.
+
+Statut : Evo est en cours de développement. L'accès anticipé est ouvert, gratuit et sans engagement. Les tarifs seront annoncés à l'ouverture.
+
+## Points clés
+
+- Public : élèves du primaire, du collège et du lycée au Gabon, leurs parents, et les établissements scolaires.
+- Ce qu'Evo fait : expliquer autrement jusqu'à ce que ce soit compris, faire pratiquer au bon niveau, corriger les devoirs et suivre les progrès matière par matière.
+- Disponibilité : 24 h/24, sur téléphone, tablette et ordinateur. Un téléphone suffit.
+- Accessibilité : outils intégrés dès la conception pour les élèves sourds, malentendants et malvoyants.
+- Evo complète le travail de l'enseignant, il ne le remplace pas.
+- Données : aucun cookie publicitaire, aucun traceur, aucune revente.
+
+## Pages
+
+- [Accueil](https://www.evomrv.ga/): présentation complète d'Evo, questions fréquentes et réservation d'une place.
+- [Politique de confidentialité](https://www.evomrv.ga/politique-de-confidentialite): données traitées, durées, droits.
+- [Sécurité des données](https://www.evomrv.ga/securite-des-donnees): mesures de protection et signalement d'une faille.
+- [Conditions d'utilisation](https://www.evomrv.ga/conditions-utilisation): règles du site et de l'accès anticipé.
+- [Accessibilité du site](https://www.evomrv.ga/accessibilite): engagements et réglages d'accessibilité.
+- [Mentions légales](https://www.evomrv.ga/mentions-legales): éditeur et hébergeur.
+
+## Contact
+
+- WhatsApp et téléphone : +241 77 20 17 87
+- E-mail : contact@evomrv.ga
