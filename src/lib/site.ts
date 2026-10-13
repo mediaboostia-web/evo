@@ -46,11 +46,16 @@ export const site = {
    * Tant que les deux sont vides, le cadre affiche l'affiche et la mention « bientôt disponible ».
    */
   video: {
-    mp4: "" as string, // ex. "/video/evo-presentation.mp4"
+    mp4: "/video/evo-presentation.mp4" as string,
     youtubeId: "" as string, // ex. "dQw4w9WgXcQ"
-    captions: "" as string, // ex. "/video/evo-presentation.fr.vtt"
-    poster: "/images/eleve-revise-le-soir.jpg",
-    durationLabel: "60 secondes",
+    // Les sous-titres sont incrustés dans l'image du film : ne pas les ajouter une seconde fois ici.
+    // Le fichier /video/evo-presentation.fr.vtt sert pour YouTube ou un autre lecteur.
+    captions: "" as string,
+    poster: "/video/evo-presentation-affiche.jpg",
+    durationLabel: "90 secondes",
+    /** Durée exacte et date de mise en ligne, pour les moteurs de recherche. */
+    duration: "PT1M27S",
+    uploadDate: "2026-10-13",
   },
 
   /**

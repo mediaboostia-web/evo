@@ -1,17 +1,19 @@
 FILM DE PRÉSENTATION (section juste après le héros)
 
-Format attendu : 16:9, 1920 x 1080, MP4 (H.264 + AAC), idéalement moins de 15 Mo pour 60 secondes.
+Fichiers en place :
+  evo-presentation.mp4            le film, 1 min 27, 1920 x 1080, sous-titres incrustés dans l'image
+  evo-presentation-affiche.jpg    l'image affichée avant la lecture
+  evo-presentation.fr.vtt         les mêmes sous-titres en fichier séparé (YouTube, autre lecteur)
 
-Option A : fichier hébergé sur le site
-  1. Déposer ici le fichier, par exemple : evo-presentation.mp4
-  2. Déposer les sous-titres français : evo-presentation.fr.vtt
-  3. Dans src/lib/site.ts, renseigner :
-       mp4: "/video/evo-presentation.mp4"
-       captions: "/video/evo-presentation.fr.vtt"
+Réglages : src/lib/site.ts, bloc "video".
+  Les sous-titres étant déjà dans l'image, le champ "captions" reste vide :
+  le renseigner les afficherait deux fois.
+  La transcription affichée sous le film se modifie dans src/lib/content.ts (filmTranscript).
 
-Option B : vidéo YouTube
-  Dans src/lib/site.ts, renseigner : youtubeId: "IDENTIFIANT_DE_LA_VIDEO"
-  Le lecteur est chargé en mode de confidentialité avancée, uniquement au clic.
+Remplacer le film :
+  Option A, fichier hébergé sur le site : déposer le nouveau MP4 ici (16:9, H.264 + AAC,
+    idéalement moins de 20 Mo) et mettre son chemin dans "mp4".
+  Option B, YouTube : vider "mp4" et renseigner youtubeId: "IDENTIFIANT_DE_LA_VIDEO".
+    Le lecteur est chargé en mode de confidentialité avancée, uniquement au clic.
 
-L'affiche (image affichée avant la lecture) se change avec le champ "poster".
-Tant qu'aucune vidéo n'est renseignée, le cadre affiche « Film de présentation, bientôt disponible ».
+Refaire le film à partir de ses sources : voir video/LISEZ-MOI.md.

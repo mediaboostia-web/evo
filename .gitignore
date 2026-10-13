@@ -31,3 +31,8 @@ yarn-error.log*
 
 # scènes vidéo brutes : matière de montage, pas un contenu du site
 /evo ressources/video scenes/
+
+# film : matière brute, fichiers intermédiaires et version maître (voir video/LISEZ-MOI.md)
+/video/sources/
+/video/work/
+/video/out/

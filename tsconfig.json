@@ -19,5 +19,5 @@
     }
   },
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules", "refonte", "evo ressources", "scripts"]
+  "exclude": ["node_modules", "refonte", "evo ressources", "scripts", "video"]
 }

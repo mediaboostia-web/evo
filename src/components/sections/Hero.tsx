@@ -52,7 +52,7 @@ export function Hero() {
               </ButtonLink>
               <ButtonLink href="/#film" variant="ghost">
                 <Play weight="fill" className="size-4" aria-hidden />
-                Voir Evo en 60 secondes
+                Voir Evo en 90 secondes
               </ButtonLink>
             </div>
           </div>

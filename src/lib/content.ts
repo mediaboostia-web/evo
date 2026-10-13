@@ -163,3 +163,53 @@ export const faq = [
       "Nous ne collectons que le strict nécessaire, jamais à des fins publicitaires, et rien n'est revendu. Notre politique de confidentialité détaille vos droits.",
   },
 ] as const;
+
+/**
+ * Transcription du film de présentation : ce qui est dit, et ce qui est montré.
+ * Elle rend le film accessible sans le son et sans l'image.
+ */
+export const filmTranscript: { said: string; shown?: string }[] = [
+  {
+    said: "Dix-neuf heures. Grâce a quinze ans, un contrôle demain… et le même exercice depuis deux heures.",
+    shown: "Le soir, une élève seule à son bureau, sous une lampe.",
+  },
+  { said: "Elle relit. Elle gomme. Elle recommence.", shown: "Trois fois le même geste sur le cahier." },
+  { said: "Ce n'est pas qu'elle ne travaille pas. C'est que personne n'est là pour lui expliquer autrement." },
+  {
+    said: "En classe, son professeur a expliqué la leçon. Une fois, pour tout le monde. Grâce n'a pas tout compris… et n'a pas osé le dire.",
+    shown: "Une salle de classe. Sa question n'est jamais posée.",
+  },
+  {
+    said: "Certains élèves suivent ce cours sans l'entendre.",
+    shown: "Un élève porte un appareil auditif. Le film devient totalement silencieux pendant deux secondes.",
+  },
+  {
+    said: "D'autres, sans le voir.",
+    shown: "Une élève malvoyante, casque sur les oreilles, lit en braille. L'image devient floue pendant deux secondes ; le son, lui, reste net.",
+  },
+  {
+    said: "À la maison, sa mère rentre du travail. Elle regarde le cahier, elle encourage. Mais un répétiteur, ce n'est pas dans le budget.",
+    shown: "Sa mère se penche sur le cahier et sourit.",
+  },
+  { said: "Alors ce soir, Grâce essaie autre chose. Evo. Mon Répétiteur Virtuel.", shown: "Sur son ordinateur, le site d'Evo." },
+  {
+    said: "Elle pose sa question. Evo explique autrement, avec un exemple de chez elle. Puis un exercice, juste à son niveau. Elle peut redemander dix fois : personne ne soupire.",
+    shown: "Elle écrit « Je ne comprends pas les fractions ». Evo répond avec un bâton de manioc coupé en quatre, puis propose un exercice.",
+  },
+  {
+    said: "Et pour les élèves sourds ou malvoyants : des sous-titres, la langue des signes, la lecture à voix haute. Dès le départ.",
+    shown: "Les quatre outils : sous-titres automatiques, avatar en langue des signes, lecture à voix haute, braille numérique.",
+  },
+  {
+    said: "Ce soir-là, Grâce a compris. Et le lendemain, quand le professeur demande qui veut essayer… elle se lève.",
+    shown: "Grâce sourit. Le lendemain, elle écrit au tableau.",
+  },
+  {
+    said: "Un élève qui bloque n'est pas un élève incapable. Il lui manque quelqu'un pour expliquer autrement.",
+    shown: "Les trois élèves, côte à côte.",
+  },
+  {
+    said: "Evo. Un répétiteur pour chaque élève. Réservez sa place.",
+    shown: "La page d'accueil d'Evo, puis le bouton « Réserver ma place ».",
+  },
+];

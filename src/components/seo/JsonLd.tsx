@@ -1,4 +1,4 @@
-import { faq } from "@/lib/content";
+import { faq, filmTranscript } from "@/lib/content";
 import { absoluteUrl, site } from "@/lib/site";
 
 /** Injecte un bloc de données structurées schema.org (JSON-LD). */
@@ -84,6 +84,26 @@ export const homeGraph = {
       about: { "@id": absoluteUrl("/#application") },
       primaryImageOfPage: absoluteUrl("/opengraph-image"),
     },
+    ...(site.video.mp4
+      ? [
+          {
+            "@type": "VideoObject",
+            "@id": absoluteUrl("/#film"),
+            name: `${site.fullName} : le film de présentation`,
+            description:
+              "Grâce, quinze ans, bloque sur un exercice la veille d'un contrôle. Le film montre comment Evo explique autrement, pour chaque élève, y compris sourd ou malvoyant.",
+            thumbnailUrl: absoluteUrl(site.video.poster),
+            contentUrl: absoluteUrl(site.video.mp4),
+            uploadDate: site.video.uploadDate,
+            duration: site.video.duration,
+            inLanguage: "fr",
+            isFamilyFriendly: true,
+            accessibilityFeature: ["openCaptions", "transcript"],
+            transcript: filmTranscript.map((line) => line.said).join(" "),
+            publisher: { "@id": organizationId },
+          },
+        ]
+      : []),
     {
       "@type": ["SoftwareApplication", "LearningResource"],
       "@id": absoluteUrl("/#application"),

@@ -9,7 +9,10 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "images": "node scripts/optimize-images.mjs"
+    "images": "node scripts/optimize-images.mjs",
+    "film:son": "node video/scripts/audio.js",
+    "film:rendu": "node video/scripts/render.js film",
+    "film:export": "node video/scripts/export.js"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

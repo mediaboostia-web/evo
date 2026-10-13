@@ -1,9 +1,10 @@
 "use client";
 
-import { ClosedCaptioning, Play, Timer } from "@phosphor-icons/react";
+import { ClosedCaptioning, Play, Plus, Timer } from "@phosphor-icons/react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { filmTranscript } from "@/lib/content";
 import { site } from "@/lib/site";
 import { useReducedMotionPref } from "@/lib/useReducedMotionPref";
 
@@ -29,7 +30,7 @@ export function Film() {
       <div className="container-page">
         <div data-reveal="up" className="mx-auto max-w-3xl text-center">
           <h2 id="film-title" className="text-h2">
-            Evo en 60 secondes.
+            Evo en 90 secondes.
           </h2>
           <p className="text-lead mt-4 text-copy">Une question, une explication, un exercice. Regardez.</p>
         </div>
@@ -54,7 +55,7 @@ export function Film() {
               <iframe
                 className="absolute inset-0 size-full"
                 src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&cc_load_policy=1&hl=fr`}
-                title="Evo en 60 secondes : film de présentation"
+                title="Evo en 90 secondes : film de présentation"
                 allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowFullScreen
               />
@@ -62,7 +63,7 @@ export function Film() {
               <>
                 <Image
                   src={video.poster}
-                  alt="Une élève révise le soir à son bureau, éclairée par une lampe, devant son ordinateur."
+                  alt="Grâce, de profil, le soir à son bureau, devant son ordinateur où s’affiche le site d’Evo."
                   fill
                   sizes="(min-width: 1280px) 1168px, 94vw"
                   className="object-cover"
@@ -78,7 +79,7 @@ export function Film() {
                       type="button"
                       onClick={() => setPlaying(true)}
                       className="on-dark group flex size-18 items-center justify-center rounded-full bg-white text-evo-600 shadow-float transition-transform duration-300 ease-out hover:scale-108 active:scale-95 sm:size-24"
-                      aria-label="Lire le film de présentation d'Evo (60 secondes, sous-titré)"
+                      aria-label="Lire le film de présentation d'Evo (90 secondes, sous-titré)"
                     >
                       <Play weight="fill" className="size-7 translate-x-0.5 sm:size-9" aria-hidden />
                     </button>
@@ -114,6 +115,28 @@ export function Film() {
             </ul>
           )}
         </motion.div>
+
+        {/* Le film, lisible sans le son et sans l'image : ce qui est dit, et ce qui est montré. */}
+        {hasVideo ? (
+          <details className="faq-item group mx-auto mt-6 max-w-3xl rounded-[1.25rem] border border-line-soft bg-white px-5 sm:mt-8 sm:px-7">
+            <summary className="flex items-center justify-between gap-6 py-4 sm:py-5">
+              <span className="font-display text-lg leading-snug font-bold tracking-tight text-ink sm:text-xl">
+                Lire la transcription du film
+              </span>
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-evo-50 text-evo-700 transition-[transform,background-color,color] duration-300 group-open:rotate-45 group-open:bg-evo-600 group-open:text-white">
+                <Plus weight="bold" className="size-4" aria-hidden />
+              </span>
+            </summary>
+            <ol className="flex flex-col gap-4 pb-6 text-copy">
+              {filmTranscript.map((line) => (
+                <li key={line.said}>
+                  <p className="text-ink">{line.said}</p>
+                  {line.shown ? <p className="mt-1 text-[0.9375rem] text-muted">À l&apos;image : {line.shown}</p> : null}
+                </li>
+              ))}
+            </ol>
+          </details>
+        ) : null}
       </div>
     </section>
   );

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "refonte/**",
     "evo ressources/**",
+    // fabrication du film : scripts Node autonomes, hors du site
+    "video/**",
   ]),
 ]);
 

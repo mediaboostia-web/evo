@@ -27,7 +27,7 @@ Node.js 20.9 ou plus récent.
 | Besoin                                                    | Fichier                                              |
 | --------------------------------------------------------- | ---------------------------------------------------- |
 | Téléphone, e-mail, Facebook, adresse du site              | `src/lib/site.ts`                                    |
-| **Vidéo de présentation** (fichier MP4 ou identifiant YouTube) | `src/lib/site.ts`, bloc `video` (voir `public/video/LISEZ-MOI.txt`) |
+| **Vidéo de présentation** (fichier MP4 ou identifiant YouTube) | `src/lib/site.ts`, bloc `video` (voir `video/LISEZ-MOI.md`) |
 | **Mentions légales à compléter** (RCCM, NIF, siège, hébergeur) | `src/lib/site.ts`, bloc `legal`                      |
 | Textes : accroches, chiffres, étapes, profils, questions  | `src/lib/content.ts`                                 |
 | Couleurs, typographie, rayons, ombres                     | `src/app/globals.css`, bloc `@theme`                 |
@@ -35,14 +35,15 @@ Node.js 20.9 ou plus récent.
 | Ordre des sections                                        | `src/app/page.tsx`                                   |
 | Pages juridiques                                          | `src/app/<nom-de-la-page>/page.tsx`                  |
 
-### Ajouter le film de présentation
+### Le film de présentation
 
-La section située juste après le héros attend une vidéo **16:9 (1920 x 1080)**. Tant qu'aucune vidéo n'est renseignée, le cadre affiche l'image d'attente et la mention « bientôt disponible ».
+La section située juste après le héros lit `public/video/evo-presentation.mp4` : 1 min 27, 16:9, sous-titres incrustés. Une transcription dépliable est affichée sous le film, et le film est décrit aux moteurs de recherche (`VideoObject`).
 
-1. Déposer `evo-presentation.mp4` et ses sous-titres `evo-presentation.fr.vtt` dans `public/video/`.
-2. Dans `src/lib/site.ts` : `mp4: "/video/evo-presentation.mp4"` et `captions: "/video/evo-presentation.fr.vtt"`.
+- Réglages : `src/lib/site.ts`, bloc `video`. Le champ `captions` reste vide, car les sous-titres sont déjà dans l'image.
+- Transcription : `src/lib/content.ts`, `filmTranscript`.
+- Fabrication, sources et commandes pour refaire le film : [video/LISEZ-MOI.md](video/LISEZ-MOI.md).
 
-Variante YouTube : renseigner seulement `youtubeId`. Le lecteur n'est chargé qu'au clic, en mode de confidentialité avancée.
+Variante YouTube : vider `mp4` et renseigner `youtubeId`. Le lecteur n'est chargé qu'au clic, en mode de confidentialité avancée.
 
 ## Structure
 
